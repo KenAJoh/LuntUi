@@ -1,0 +1,34 @@
+{
+  "name": "luntui",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenAJoh/LuntUi.git"
+  },
+  "author": "Ken Aleksander Johansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KenAJoh/LuntUi/issues"
+  },
+  "homepage": "https://github.com/KenAJoh/LuntUi#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.0-alpha.42",
+    "@storybook/addon-interactions": "^7.0.0-alpha.42",
+    "@storybook/addon-links": "^7.0.0-alpha.42",
+    "@storybook/react": "^7.0.0-alpha.42",
+    "@storybook/react-vite": "^7.0.0-alpha.42",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0-alpha.42"
+  },
+  "dependencies": {}
+}

@@ -1,6 +1,7 @@
 {
-  "name": "luntui",
+  "name": "repo",
   "version": "0.0.0",
+  "private": true,
   "description": "",
   "repository": {
     "type": "git",
@@ -13,12 +14,9 @@
   },
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "yarn workspaces luntui storybook"
   },
-  "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "workspaces": [
+    "lunt-react"
+  ]
 }

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "importsNotUsedAsValues": "error",
+    "outDir": "build/ts/latest",
+    "rootDir": "./",
+    "strictFunctionTypes": false,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "noEmitHelpers": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "scripthost", "es2020"],
+    "module": "esnext",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["./src", "./src/**/*.json", ".storybook/**/*.ts", ".storybook/**/*.tsx"],
+  "compileOnSave": false,
+  "exclude": ["./src/**/*.stories.tsx"]
+}
