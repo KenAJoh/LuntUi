@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
   "scripts": {
-    "dev": "yarn workspaces luntui storybook"
+    "dev": "yarn workspace luntui storybook"
   },
   "workspaces": [
     "lunt-react"
