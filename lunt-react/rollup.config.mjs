@@ -3,12 +3,16 @@ import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import * as path from "path";
-import css from "rollup-plugin-import-css";
 import { externals } from "rollup-plugin-node-externals";
+import postcss from "rollup-plugin-postcss";
+import postcssImport from "postcss-import";
+import postcssDuplicate from "postcss-combine-duplicated-selectors";
 
 import { readFileSync } from "fs";
 
-const pkg = JSON.parse(readFileSync(new URL("./package.json", import.meta.url).pathname));
+const pkg = JSON.parse(
+  readFileSync(new URL("./package.json", import.meta.url).pathname)
+);
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const targets = [
   "last 3 chrome versions",
@@ -26,15 +30,18 @@ export default {
   input: "./src/index.ts",
   output: { file: "dist/index.js", format: "esm" },
   plugins: [
-    externals({ deps: true, packagePath: "./package.json" }),
+    externals({ deps: true, devDeps: true, packagePath: "./package.json" }),
     nodeResolve({ extensions }),
+    postcss({
+      extract: true,
+      extract: "index.css",
+      plugins: [postcssImport(), postcssDuplicate()],
+    }),
     replace({
       "{{LUNT_VERSION}}": pkg.version,
       delimiters: ["", ""],
       preventAssignment: true,
-    }),
-    css({
-      output: "../css/index.css",
+      include: "index.css",
     }),
     commonjs(),
     babel({

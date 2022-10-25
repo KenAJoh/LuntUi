@@ -15,7 +15,7 @@
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
   "scripts": {
     "dev": "yarn workspace @lunt/react storybook",
-    "build": "yarn workspaces foreach -pA --topological-dev --no-private run yarn build"
+    "build": "yarn workspaces foreach -pA --topological-dev --no-private run build"
   },
   "workspaces": [
     "lunt-*"

@@ -11,12 +11,10 @@
   "bugs": {
     "url": "https://github.com/KenAJoh/LuntUi/issues"
   },
+  "main": "dibuildst/tokens.css",
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
   "files": [
-    "build/",
-    "!build/**/*.tsbuildinfo"
+    "build/"
   ],
   "scripts": {
     "build": "yarn clean && style-dictionary build",
