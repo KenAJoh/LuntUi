@@ -28,6 +28,14 @@ export default {
   plugins: [
     externals({ deps: true, packagePath: "./package.json" }),
     nodeResolve({ extensions }),
+    replace({
+      "{{LUNT_VERSION}}": pkg.version,
+      delimiters: ["", ""],
+      preventAssignment: true,
+    }),
+    css({
+      output: "../css/index.css",
+    }),
     commonjs(),
     babel({
       rootMode: "upward",
@@ -37,26 +45,20 @@ export default {
       envName: "production",
       targets,
     }),
-    css(),
-    replace({
-      "{{LUNT_VERSION}}": pkg.version,
-      delimiters: ["", ""],
-      preventAssignment: true,
-    }),
   ],
   output: [
     {
       format: "cjs",
       dir: path.dirname(pkg.main),
       preserveModules: true,
-      entryFileNames: "[name][assetExtname].js",
+      entryFileNames: "[name].js",
       exports: "named",
     },
     {
       format: "esm",
       dir: path.dirname(pkg.module),
       preserveModules: true,
-      entryFileNames: "[name][assetExtname].js",
+      entryFileNames: "[name].js",
     },
   ],
 };

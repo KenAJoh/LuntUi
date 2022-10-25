@@ -14,7 +14,7 @@ module.exports = {
       },
     ],
     ["@babel/preset-typescript", {}],
-    ["@babel/preset-react", { useBuiltIns: true }],
+    ["@babel/preset-react", { development: false, useBuiltIns: true }],
   ],
   babelrcRoots: [".", "./lunt-react"],
 };
