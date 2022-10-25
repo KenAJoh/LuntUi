@@ -41,7 +41,6 @@ export default {
       "{{LUNT_VERSION}}": pkg.version,
       delimiters: ["", ""],
       preventAssignment: true,
-      include: "index.css",
     }),
     commonjs(),
     babel({
