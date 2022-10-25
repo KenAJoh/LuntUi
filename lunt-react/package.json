@@ -12,9 +12,14 @@
     "url": "https://github.com/KenAJoh/LuntUi/issues"
   },
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "files": [
+    "build/"
+  ],
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.0-alpha.42",
@@ -27,7 +32,14 @@
     "@types/react-dom": "^18.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.0-alpha.42"
+    "storybook": "^7.0.0-alpha.42",
+    "rollup": "3.2.3",
+    "@rollup/plugin-replace": "5.0.1",
+    "rollup-plugin-node-externals": "5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-commonjs": "23.0.2",
+    "@rollup/plugin-babel": "6.0.2",
+    "rollup-plugin-import-css": "3.0.3"
   },
   "dependencies": {}
 }

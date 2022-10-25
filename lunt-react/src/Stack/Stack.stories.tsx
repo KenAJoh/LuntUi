@@ -36,20 +36,20 @@ Default.args = {
 };
 
 export const Spacing = () => (
-  <div className="rowgap">
+  <Stack>
     <Stack spacing="1">{elements}</Stack>
     <Stack spacing="2">{elements}</Stack>
     <Stack spacing="3">{elements}</Stack>
     <Stack spacing="4">{elements}</Stack>
-  </div>
+  </Stack>
 );
 
 export const align = () => (
-  <div className="rowgap">
+  <Stack>
     <Stack align="start">{elements}</Stack>
     <Stack align="center">{elements}</Stack>
     <Stack align="end">{elements}</Stack>
-  </div>
+  </Stack>
 );
 
 export const fullWidth = () => (
