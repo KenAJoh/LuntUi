@@ -2,14 +2,14 @@
   "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "KenAJoh/LuntUi" }],
   "commit": false,
-  "fixed": [],
+  "fixed": [["@lunt/*"]],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [],
 
-  "2___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "updateInternalDependents": "always"
   }
 }
