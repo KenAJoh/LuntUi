@@ -1,6 +1,6 @@
 {
   "name": "@lunt/tokens",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
     "build": "yarn clean && style-dictionary build",
     "clean": "rimraf build"
   },
-  "dependencies": {},
   "devDependencies": {
     "style-dictionary": "^3.7.1"
   }

@@ -14,12 +14,11 @@
   },
   "homepage": "https://github.com/KenAJoh/LuntUi#readme",
   "scripts": {
-    "dev": "yarn workspace lunt-react storybook",
+    "dev": "yarn workspace @lunt/react storybook",
     "build": "yarn workspaces foreach -pA --topological-dev --no-private run yarn build"
   },
   "workspaces": [
-    "@lunt/react",
-    "@lunt/tokens"
+    "lunt-*"
   ],
   "devDependencies": {
     "@babel/preset-env": "7.19.4",
