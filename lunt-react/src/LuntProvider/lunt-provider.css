@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../../lunt-tokens/build/tokens.css";
 
 :root {
   --lunt-version: "{{LUNT_VERSION}}";
@@ -6,8 +6,12 @@
 
 html,
 body {
-  @include text-style-body;
-  @include text-emphasis-normal;
+  text-transform: initial;
+  letter-spacing: initial;
+
+  font-weight: var(--l-font-weight-regular);
+  line-height: var(--l-font-line-height-2);
+  color: var(--l-text);
 }
 
 html,
@@ -30,7 +34,7 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f6f6f7;
+  background-color: #f6f6f6;
 }
 
 @media print {

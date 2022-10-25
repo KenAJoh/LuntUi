@@ -1,0 +1,29 @@
+{
+  "name": "@lunt/tokens",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenAJoh/LuntUi.git"
+  },
+  "author": "Ken Aleksander Johansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KenAJoh/LuntUi/issues"
+  },
+  "homepage": "https://github.com/KenAJoh/LuntUi#readme",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "files": [
+    "build/",
+    "!build/**/*.tsbuildinfo"
+  ],
+  "scripts": {
+    "build": "yarn clean && style-dictionary build",
+    "clean": "rimraf build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "style-dictionary": "^3.7.1"
+  }
+}
