@@ -1,5 +1,11 @@
 # @lunt/react
 
+## 1.1.0
+
+### Minor Changes
+
+- [`acca0f5`](https://github.com/KenAJoh/LuntUi/commit/acca0f58498cb4ca8357226ce7e945a41ec8608d) Thanks [@KenAJoh](https://github.com/KenAJoh)! - ad
+
 ## 0.2.0
 
 ### Minor Changes
