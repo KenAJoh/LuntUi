@@ -2083,6 +2083,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lunt/tokens@workspace:lunt-tokens"
   dependencies:
+    rimraf: 3.0.2
     style-dictionary: ^3.7.1
   languageName: unknown
   linkType: soft

@@ -21,7 +21,7 @@
     "clean": "rimraf build"
   },
   "devDependencies": {
-    "style-dictionary": "^3.7.1",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "style-dictionary": "^3.7.1"
   }
 }
