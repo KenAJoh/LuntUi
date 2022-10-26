@@ -2013,7 +2013,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lunt/demo@workspace:lunt-demo"
   dependencies:
-    "@lunt/react": 0.0.2
+    "@lunt/react": 1.0.0
     "@rollup/plugin-babel": 6.0.2
     "@rollup/plugin-commonjs": 23.0.2
     "@rollup/plugin-node-resolve": ^15.0.1
@@ -2044,11 +2044,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@lunt/react@0.0.2, @lunt/react@workspace:lunt-react":
+"@lunt/react@1.0.0, @lunt/react@workspace:lunt-react":
   version: 0.0.0-use.local
   resolution: "@lunt/react@workspace:lunt-react"
   dependencies:
-    "@lunt/tokens": 0.0.2
+    "@lunt/tokens": 1.0.0
     "@rollup/plugin-babel": 6.0.2
     "@rollup/plugin-commonjs": 23.0.2
     "@rollup/plugin-node-resolve": ^15.0.1
@@ -2079,7 +2079,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@lunt/tokens@0.0.2, @lunt/tokens@workspace:lunt-tokens":
+"@lunt/tokens@1.0.0, @lunt/tokens@workspace:lunt-tokens":
   version: 0.0.0-use.local
   resolution: "@lunt/tokens@workspace:lunt-tokens"
   dependencies:
