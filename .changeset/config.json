@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "KenAJoh/LuntUi" }],
   "commit": false,
-  "fixed": [["@lunt/*"]],
+  "fixed": [["@lunt/react", "@lunt/tokens"]],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
