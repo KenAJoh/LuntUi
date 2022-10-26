@@ -1,6 +1,6 @@
 {
   "name": "@lunt/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@lunt/tokens": "0.0.1",
+    "@lunt/tokens": "0.0.2",
     "@rollup/plugin-babel": "6.0.2",
     "@rollup/plugin-commonjs": "23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
