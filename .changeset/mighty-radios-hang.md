@@ -1,0 +1,5 @@
+---
+"@lunt/demo": minor
+---
+
+Demo
