@@ -1,19 +1,16 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import type { Meta } from "@storybook/react";
+
 import { Stack } from "./index";
 
-export default {
+const meta: Meta<typeof Stack> = {
   title: "Layout/Stack",
   component: Stack,
-  argTypes: {
-    align: {
-      control: {
-        type: "radio",
-        options: ["start", "end", "center"],
-      },
-    },
-  },
-} as Meta<typeof Stack>;
+  tags: ["autodocs"],
+};
+
+export default meta;
+type Story = StoryObj<typeof Stack>;
 
 const elements = (
   <>
@@ -24,38 +21,41 @@ const elements = (
   </>
 );
 
-export const Default = (props) => (
-  <div style={{ width: "10rem" }}>
-    <Stack {...props}>{elements}</Stack>
-  </div>
-);
-
-Default.args = {
-  spacing: "4",
-  fullWidth: false,
+export const Demo: Story = {
+  render: (props) => (
+    <div style={{ width: "10rem" }}>
+      <Stack {...props}>{elements}</Stack>
+    </div>
+  ),
 };
 
-export const Spacing = () => (
-  <Stack>
-    <Stack spacing="1">{elements}</Stack>
-    <Stack spacing="2">{elements}</Stack>
-    <Stack spacing="3">{elements}</Stack>
-    <Stack spacing="4">{elements}</Stack>
-  </Stack>
-);
-
-export const align = () => (
-  <Stack>
-    <Stack align="start">{elements}</Stack>
-    <Stack align="center">{elements}</Stack>
-    <Stack align="end">{elements}</Stack>
-  </Stack>
-);
-
-export const fullWidth = () => (
-  <div style={{ width: "10rem" }}>
-    <Stack align="start" fullWidth>
-      {elements}
+export const Spacing: Story = {
+  render: () => (
+    <Stack>
+      <Stack spacing="1">{elements}</Stack>
+      <Stack spacing="2">{elements}</Stack>
+      <Stack spacing="3">{elements}</Stack>
+      <Stack spacing="4">{elements}</Stack>
     </Stack>
-  </div>
-);
+  ),
+};
+
+export const Align: Story = {
+  render: () => (
+    <Stack>
+      <Stack align="start">{elements}</Stack>
+      <Stack align="center">{elements}</Stack>
+      <Stack align="end">{elements}</Stack>
+    </Stack>
+  ),
+};
+
+export const FullWidth: Story = {
+  render: () => (
+    <div style={{ width: "10rem" }}>
+      <Stack align="start" fullWidth>
+        {elements}
+      </Stack>
+    </div>
+  ),
+};
