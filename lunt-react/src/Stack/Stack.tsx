@@ -1,35 +1,41 @@
-import cl from "clsx";
+import cl from "../utils/clsx";
 import React from "react";
 import "./stack.css";
 
-export interface StackProps {
-  children: React.ReactNode;
+export interface StackProps extends React.AriaAttributes {
+  children?: React.ReactNode;
   /**
    * @default "4"
    */
-  spacing?:
-    | "32"
-    | "24"
-    | "20"
-    | "18"
-    | "16"
-    | "14"
-    | "12"
-    | "11"
-    | "10"
-    | "9"
-    | "8"
-    | "7"
-    | "6"
-    | "5"
-    | "4"
-    | "3"
+  gap?:
+    | "1"
     | "2"
-    | "1";
+    | "3"
+    | "4"
+    | "5"
+    | "6"
+    | "7"
+    | "8"
+    | "9"
+    | "10"
+    | "11"
+    | "12"
+    | "14"
+    | "16"
+    | "18"
+    | "20"
+    | "24"
+    | "32";
   /** Makes children use full width */
   align?: "start" | "end" | "center";
   /** Makes children use full width */
   fullWidth?: boolean;
+  /**
+   * @default "div"
+   */
+  as?: "div" | "ol" | "ul" | "fieldset";
+  /** */
+  id?: string;
 }
 
 const alignT = {
@@ -40,18 +46,30 @@ const alignT = {
 
 export const Stack = ({
   children,
-  spacing = "4",
+  gap = "4",
   align = "start",
   fullWidth,
+  as: As = "div",
+  ...rest
 }: StackProps) => {
   const style = {
     "--lc-stack-align": align ? `${alignT[align]}` : "",
-    "--lc-stack-spacing": `var(--l-space-${spacing})`,
+    "--lc-stack-gap": `var(--l-space-${gap})`,
   } as React.CSSProperties;
 
   return (
-    <div style={style} className={cl("l-stack", fullWidth && "l-stack--full")}>
+    <As
+      {...rest}
+      style={style}
+      className={cl(
+        "l-stack",
+        fullWidth && "l-stack--full",
+        As === "fieldset" && "l-stack--reset-fieldset",
+        As === "ul" && "l-stack--reset-list",
+        As === "ol" && "l-stack--reset-list"
+      )}
+    >
       {children}
-    </div>
+    </As>
   );
 };

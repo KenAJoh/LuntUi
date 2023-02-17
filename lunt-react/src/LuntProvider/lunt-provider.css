@@ -10,15 +10,15 @@ body {
   text-transform: initial;
   letter-spacing: initial;
 
-  font-weight: var(--l-font-weight-regular);
-  line-height: var(--l-font-line-height-2);
+  /* font-weight: var(--l-font-weight-regular);
+  line-height: var(--l-font-line-height-2); */
   color: var(--l-text);
 }
 
 html,
 body,
 button {
-  font-family: var(--l-font-family, "Source Sans Pro", Arial, sans-serif);
+  font-family: var(--l-font-family-sans);
 }
 
 html {
@@ -73,7 +73,6 @@ button::-moz-focus-inner,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *:not(.navds-loader *):not(.navds-loader),
   ::before,
   ::after {
     animation-delay: -1ms !important;

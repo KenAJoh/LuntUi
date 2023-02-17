@@ -29,13 +29,13 @@ export const Demo: Story = {
   ),
 };
 
-export const Spacing: Story = {
+export const Gap: Story = {
   render: () => (
     <Stack>
-      <Stack spacing="1">{elements}</Stack>
-      <Stack spacing="2">{elements}</Stack>
-      <Stack spacing="3">{elements}</Stack>
-      <Stack spacing="4">{elements}</Stack>
+      <Stack gap="2">{elements}</Stack>
+      <Stack gap="4">{elements}</Stack>
+      <Stack gap="8">{elements}</Stack>
+      <Stack gap="16">{elements}</Stack>
     </Stack>
   ),
 };

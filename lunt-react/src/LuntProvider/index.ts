@@ -1,1 +1,1 @@
-export * from "./LuntProvider";
+export { LuntProvider } from "./LuntProvider";

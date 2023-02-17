@@ -1,8 +1,10 @@
 import React from "react";
 import "./lunt-provider.css";
 
-export interface LuntproviderProps {
+export interface LuntProviderProps {
   children: React.ReactNode;
 }
 
-export const Luntprovider = ({ children }: LuntproviderProps) => <div>{children}</div>;
+export const LuntProvider = ({ children }: LuntProviderProps) => (
+  <div>{children}</div>
+);
