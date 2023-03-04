@@ -1,10 +1,39 @@
 .l-badge {
-  background-color: var(--l-gray-200);
   padding: var(--l-space-1) var(--l-space-2);
-  border: 1px solid var(--l-gray-400);
+  border: 1px solid;
   border-radius: var(--l-radii-4);
   font-size: var(--l-font-size-xs);
   line-height: var(--l-font-height-sm);
+
+  &--positive {
+    background-color: var(--l-green-200);
+    border-color: var(--l-green-400);
+    color: var(--l-text);
+  }
+
+  &--danger {
+    background-color: var(--l-red-200);
+    border-color: var(--l-red-400);
+    color: var(--l-text);
+  }
+
+  &--warning {
+    background-color: var(--l-orange-200);
+    border-color: var(--l-orange-400);
+    color: var(--l-text);
+  }
+
+  &--info {
+    background-color: var(--l-blue-200);
+    border-color: var(--l-blue-400);
+    color: var(--l-text);
+  }
+
+  &--neutral {
+    background-color: var(--l-gray-200);
+    border-color: var(--l-gray-400);
+    color: var(--l-text);
+  }
 }
 
 [data-lunt-feel="soft"] {
