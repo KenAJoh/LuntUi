@@ -1,0 +1,10 @@
+.l-inline {
+  display: flex;
+  align-items: var(--lc-inline-align);
+  justify-content: var(--lc-inline-justify);
+  gap: var(--lc-inline-gap);
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
