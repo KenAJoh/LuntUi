@@ -53,3 +53,21 @@
     border-radius: var(--l-radii-0);
   }
 }
+
+[data-lunt-space="tight"] {
+  & .l-badge {
+    padding: var(--l-space-05) var(--l-space-05);
+  }
+}
+
+[data-lunt-space="regular"] {
+  & .l-badge {
+    padding: var(--l-space-1) var(--l-space-2);
+  }
+}
+
+[data-lunt-space="comfy"] {
+  & .l-badge {
+    padding: var(--l-space-1) var(--l-space-3);
+  }
+}

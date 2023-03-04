@@ -19,6 +19,18 @@ export const Themed = (Story: any) => (
       <Story />
       <Tag>soft</Tag>
     </div>
+    <div data-lunt-space="tight">
+      <Story />
+      <Tag>tight</Tag>
+    </div>
+    <div data-lunt-space="regular">
+      <Story />
+      <Tag>regular</Tag>
+    </div>
+    <div data-lunt-space="comfy">
+      <Story />
+      <Tag>comfy</Tag>
+    </div>
     <div data-lunt-theme="lunt-dark" data-dark="true">
       <Story />
       <Tag>dark</Tag>
