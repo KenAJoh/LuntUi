@@ -4,10 +4,6 @@
   align-items: var(--lc-stack-align);
   gap: var(--lc-stack-gap);
 
-  & > * {
-    max-width: 100%;
-  }
-
   &--full {
     width: 100%;
   }

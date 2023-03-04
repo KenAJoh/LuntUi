@@ -22,28 +22,28 @@ export const Demo: Story = {
 
 export const Gap: Story = {
   render: () => (
-    <Stack>
+    <div>
       <Stack gap="2">{elements}</Stack>
       <Stack gap="4">{elements}</Stack>
       <Stack gap="8">{elements}</Stack>
       <Stack gap="12">{elements}</Stack>
-    </Stack>
+    </div>
   ),
 };
 
 export const Align: Story = {
   render: () => (
-    <Stack>
+    <div>
       <Stack align="start">{elements}</Stack>
       <Stack align="center">{elements}</Stack>
       <Stack align="end">{elements}</Stack>
-    </Stack>
+    </div>
   ),
 };
 
 export const FullWidth: Story = {
   render: () => (
-    <div style={{ width: "10rem" }}>
+    <div style={{ width: "16rem" }}>
       <Stack align="start" fullWidth>
         {elements}
       </Stack>
