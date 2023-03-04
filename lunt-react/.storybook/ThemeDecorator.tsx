@@ -19,5 +19,9 @@ export const Themed = (Story: any) => (
       <Story />
       <Tag>soft</Tag>
     </div>
+    <div data-lunt-theme="lunt-dark" data-dark="true">
+      <Story />
+      <Tag>dark</Tag>
+    </div>
   </div>
 );

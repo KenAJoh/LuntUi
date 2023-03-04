@@ -17,15 +17,15 @@
     color: var(--l-text);
   }
 
-  &--warning {
+  &--caution {
     background-color: var(--l-orange-200);
     border-color: var(--l-orange-400);
     color: var(--l-text);
   }
 
   &--info {
-    background-color: var(--l-blue-200);
-    border-color: var(--l-blue-400);
+    background-color: var(--l-lightblue-200);
+    border-color: var(--l-lightblue-400);
     color: var(--l-text);
   }
 

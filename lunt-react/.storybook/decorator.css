@@ -24,3 +24,12 @@
   font-size: 14px;
   border-bottom-left-radius: 2px;
 }
+
+[data-dark="true"] {
+  background-color: #111827;
+}
+
+[data-dark="true"] .themed-decorator__tag {
+  color: #f9fafb;
+  background-color: #1f2937;
+}
