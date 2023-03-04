@@ -4,11 +4,15 @@ import "./badge.scss";
 
 export interface BadgeProps extends React.AriaAttributes {
   children?: React.ReactNode;
+  /**
+   * @default "neutral"
+   */
+  theme?: "positive" | "danger" | "caution" | "info" | "neutral";
 }
 
-export const Badge = ({ children, ...rest }: BadgeProps) => {
+export const Badge = ({ children, theme, ...rest }: BadgeProps) => {
   return (
-    <span {...rest} className={cl("l-badge")}>
+    <span {...rest} className={cl("l-badge", `l-badge--${theme}`)}>
       {children}
     </span>
   );
