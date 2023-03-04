@@ -1,5 +1,5 @@
 import React from "react";
-import "./lunt-provider.css";
+import "./lunt-provider.scss";
 
 export interface LuntProviderProps {
   children: React.ReactNode;

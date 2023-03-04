@@ -4,6 +4,7 @@
 
 :root,
 :host {
+  --lunt-version: "{{LUNT_VERSION}}";
   --l-name: "@lunt/react";
   /*******************
    * Spacing

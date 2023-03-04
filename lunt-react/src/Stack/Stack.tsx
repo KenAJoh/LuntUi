@@ -1,6 +1,6 @@
 import cl from "../utils/clsx";
 import React from "react";
-import "./stack.css";
+import "./stack.scss";
 
 export interface StackProps extends React.AriaAttributes {
   children?: React.ReactNode;

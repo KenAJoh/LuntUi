@@ -7,6 +7,7 @@ import { externals } from "rollup-plugin-node-externals";
 import postcss from "rollup-plugin-postcss";
 import postcssImport from "postcss-import";
 import postcssDuplicate from "postcss-combine-duplicated-selectors";
+import scss from "rollup-plugin-scss";
 
 import { readFileSync } from "fs";
 
@@ -32,15 +33,18 @@ export default {
   plugins: [
     externals({ deps: true, devDeps: true, packagePath: "./package.json" }),
     nodeResolve({ extensions }),
-    postcss({
+    /* postcss({
       extract: true,
       extract: "index.css",
       plugins: [postcssImport(), postcssDuplicate()],
-    }),
-    replace({
-      "{{LUNT_VERSION}}": pkg.version,
-      delimiters: ["", ""],
-      preventAssignment: true,
+    }), */
+    scss({
+      fileName: "index.css",
+      /* processor: () => postcss([postcssImport(), postcssDuplicate()]), */
+      processor: (css, map) => ({
+        css: css.replace("{{LUNT_VERSION}}", pkg.version),
+        map,
+      }),
     }),
     commonjs(),
     babel({
