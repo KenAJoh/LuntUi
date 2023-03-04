@@ -1,0 +1,26 @@
+.themed-decorator {
+  display: grid;
+}
+
+.themed-decorator > div {
+  border: 1px solid #6b7280;
+  padding: 2rem;
+  position: relative;
+}
+
+.themed-decorator > div:where(:not(:first-child)) {
+  border-top: none;
+}
+
+.themed-decorator__tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #f9fafb;
+  background-color: #6b7280;
+  padding: 0.25rem 0.75rem;
+  display: grid;
+  place-content: center;
+  font-size: 14px;
+  border-bottom-left-radius: 2px;
+}

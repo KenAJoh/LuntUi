@@ -1,0 +1,26 @@
+.l-badge {
+  background-color: var(--l-gray-200);
+  padding: var(--l-space-1) var(--l-space-2);
+  border: 1px solid var(--l-gray-400);
+  border-radius: var(--l-radii-4);
+  font-size: var(--l-font-size-xs);
+  line-height: var(--l-font-height-sm);
+}
+
+[data-lunt-feel="soft"] {
+  & .l-badge {
+    border-radius: var(--l-radii-12);
+  }
+}
+
+[data-lunt-feel="regular"] {
+  & .l-badge {
+    border-radius: var(--l-radii-4);
+  }
+}
+
+[data-lunt-feel="hard"] {
+  & .l-badge {
+    border-radius: var(--l-radii-0);
+  }
+}

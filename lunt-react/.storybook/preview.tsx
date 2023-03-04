@@ -1,6 +1,6 @@
 import React from "react";
 import { LuntProvider } from "../src/index";
-/* import "../src/styles/themes/lunt.css"; */
+import "../src/styles/themes/lunt.css";
 
 export const parameters = {
   backgrounds: {

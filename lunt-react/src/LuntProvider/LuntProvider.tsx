@@ -5,6 +5,6 @@ export interface LuntProviderProps {
   children: React.ReactNode;
 }
 
-export const LuntProvider = ({ children }: LuntProviderProps) => (
-  <div>{children}</div>
+export const LuntProvider = ({ children, ...rest }: LuntProviderProps) => (
+  <div {...rest}>{children}</div>
 );
