@@ -7,9 +7,9 @@ const Tag = ({ children }: { children: React.ReactNode }) => (
 
 export const Themed = (Story: any) => (
   <div className="themed-decorator">
-    <div data-lunt-feel="hard">
+    <div data-lunt-feel="sharp">
       <Story />
-      <Tag>hard</Tag>
+      <Tag>sharp</Tag>
     </div>
     <div data-lunt-feel="regular">
       <Story />

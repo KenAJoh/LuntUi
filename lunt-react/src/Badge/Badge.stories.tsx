@@ -22,6 +22,9 @@ export const Demo: Story = {
       <Badge theme="positive">99</Badge>
       <Badge theme="caution">99</Badge>
       <Badge theme="danger">99</Badge>
+      <Badge theme="purple">99</Badge>
+      <Badge theme="turquoise">99</Badge>
+      <Badge theme="clay">99</Badge>
     </Inline>
   ),
   decorators: [Themed],

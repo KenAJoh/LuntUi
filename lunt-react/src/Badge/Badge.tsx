@@ -7,7 +7,15 @@ export interface BadgeProps extends React.AriaAttributes {
   /**
    * @default "neutral"
    */
-  theme?: "positive" | "danger" | "caution" | "info" | "neutral";
+  theme?:
+    | "positive"
+    | "danger"
+    | "caution"
+    | "info"
+    | "neutral"
+    | "purple"
+    | "turquoise"
+    | "clay";
 }
 
 export const Badge = ({ children, theme, ...rest }: BadgeProps) => {
