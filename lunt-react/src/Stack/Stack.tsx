@@ -19,13 +19,7 @@ export interface StackProps extends React.AriaAttributes {
     | "9"
     | "10"
     | "11"
-    | "12"
-    | "14"
-    | "16"
-    | "18"
-    | "20"
-    | "24"
-    | "32";
+    | "12";
   /** Makes children use full width */
   align?: "start" | "end" | "center";
   /** Makes children use full width */

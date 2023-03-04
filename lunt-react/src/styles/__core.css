@@ -1,3 +1,82 @@
-:root {
+/***********************************************
+* Lunt default CSS Variables
+************************************************/
+
+:root,
+:host {
   --l-name: "@lunt/react";
+  /*******************
+   * Spacing
+   *******************/
+  --l-space-0: 0;
+  --l-space-05: 0.125rem;
+  --l-space-1: 0.25rem;
+  --l-space-2: 0.5rem;
+  --l-space-3: 0.75rem;
+  --l-space-4: 1rem;
+  --l-space-5: 1.25rem;
+  --l-space-6: 1.5rem;
+  --l-space-7: 1.75rem;
+  --l-space-8: 2rem;
+  --l-space-9: 2.25rem;
+  --l-space-10: 2.5rem;
+  --l-space-11: 2.75rem;
+  --l-space-12: 3rem;
+
+  /*******************
+   * Border-radius
+   *******************/
+  --l-radii: 0;
+  --l-radii-2: 2px;
+  --l-radii-4: 4px;
+  --l-radii-8: 8px;
+  --l-radii-12: 12px;
+  --l-radii-full: 9999px;
+
+  /*******************
+   * Colors
+   *******************/
+  --l-text: black;
+
+  /*******************
+   * Z-index
+   *******************/
+  --l-z-index-0: 0;
+  --l-z-index-10: 10;
+  --l-z-index-20: 20;
+  --l-z-index-100: 100;
+  --l-z-index-1000: 1000;
+  --l-z-index-max: 9999;
+
+  /*******************
+   * Font
+   *******************/
+  --l-font-weight-regular: 400;
+  --l-font-weight-semibold: 600;
+  --l-font-weight-bold: 700;
+  --l-font-size-xs: 0.875rem;
+  --l-font-size-sm: 1rem;
+  --l-font-size-md: 1.125rem;
+  --l-font-size-lg: 1.25rem;
+  --l-font-size-xl: 1.5rem;
+  --l-font-size-2xl: 2rem;
+  --l-font-size-3xl: 3rem;
+  --l-font-height-sm: 1;
+  --l-font-height-md: 1.33;
+  --l-font-height-lg: 1.5;
+
+  --l-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+    "Liberation Mono", Menlo, monospace;
+  --l-font-family-sans: -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  /*******************
+   * Breakpoints
+   *******************/
+  --l-breakpoint-xs: 0;
+  --l-breakpoint-sm: 640px;
+  --l-breakpoint-md: 768px;
+  --l-breakpoint-lg: 1024px;
+  --l-breakpoint-xl: 1280px;
+  --l-breakpoint-2xl: 1440px;
 }

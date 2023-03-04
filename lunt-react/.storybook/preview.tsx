@@ -1,5 +1,6 @@
 import React from "react";
 import { LuntProvider } from "../src/index";
+/* import "../src/styles/themes/lunt.css"; */
 
 export const parameters = {
   backgrounds: {
@@ -16,7 +17,7 @@ export const parameters = {
 
 export const decorators = [
   (Story: any) => (
-    <LuntProvider>
+    <LuntProvider data-lunt-theme="lunt">
       <Story />
     </LuntProvider>
   ),

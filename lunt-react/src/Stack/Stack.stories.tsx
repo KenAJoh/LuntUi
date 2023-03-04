@@ -12,15 +12,6 @@ const meta: Meta<typeof Stack> = {
 export default meta;
 type Story = StoryObj<typeof Stack>;
 
-const elements = (
-  <>
-    <span>Info</span>
-    <span>success</span>
-    <span>error</span>
-    <span>warning</span>
-  </>
-);
-
 export const Demo: Story = {
   render: (props) => (
     <div style={{ width: "10rem" }}>
@@ -35,7 +26,7 @@ export const Gap: Story = {
       <Stack gap="2">{elements}</Stack>
       <Stack gap="4">{elements}</Stack>
       <Stack gap="8">{elements}</Stack>
-      <Stack gap="16">{elements}</Stack>
+      <Stack gap="12">{elements}</Stack>
     </Stack>
   ),
 };
@@ -59,3 +50,21 @@ export const FullWidth: Story = {
     </div>
   ),
 };
+
+const elements = (
+  <>
+    <Placeholder />
+    <Placeholder />
+    <Placeholder />
+    <Placeholder />
+  </>
+);
+
+function Placeholder({ ...props }) {
+  return (
+    <div
+      {...props}
+      style={{ width: "4rem", height: "2rem", background: "lightblue" }}
+    />
+  );
+}

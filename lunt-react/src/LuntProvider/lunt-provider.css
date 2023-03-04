@@ -1,5 +1,4 @@
 @import "../styles/__core.css";
-@import "../../../lunt-tokens/build/tokens.css";
 
 :root {
   --lunt-version: "{{LUNT_VERSION}}";
