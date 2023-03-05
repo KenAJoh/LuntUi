@@ -8,32 +8,32 @@ const Tag = ({ children }: { children: React.ReactNode }) => (
 export const Themed = (Story: any) => (
   <div className="themed-decorator">
     <div data-lunt-shape="sharp">
+      <Tag>shape: sharp</Tag>
       <Story />
-      <Tag>sharp</Tag>
     </div>
     <div data-lunt-shape="regular">
+      <Tag>shape: regular</Tag>
       <Story />
-      <Tag>regular</Tag>
     </div>
     <div data-lunt-shape="soft">
+      <Tag>shape: soft</Tag>
       <Story />
-      <Tag>soft</Tag>
     </div>
     <div data-lunt-space="tight">
+      <Tag>space: tight</Tag>
       <Story />
-      <Tag>tight</Tag>
     </div>
     <div data-lunt-space="regular">
+      <Tag>space: regular</Tag>
       <Story />
-      <Tag>regular</Tag>
     </div>
     <div data-lunt-space="comfy">
+      <Tag>space: comfy</Tag>
       <Story />
-      <Tag>comfy</Tag>
     </div>
     <div data-lunt-theme="lunt-dark" data-dark="true">
+      <Tag>theme: dark</Tag>
       <Story />
-      <Tag>dark</Tag>
     </div>
   </div>
 );
