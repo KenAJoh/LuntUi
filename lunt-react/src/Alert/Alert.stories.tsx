@@ -37,6 +37,15 @@ export const Demo: Story = {
       <Alert status="info" iconOptions={{ inline: true }}>
         {lorem}
       </Alert>
+      <Alert status="neutral" themeOptions={{ elevated: "sm" }}>
+        {lorem}
+      </Alert>
+      <Alert status="neutral" themeOptions={{ elevated: "md" }}>
+        {lorem}
+      </Alert>
+      <Alert status="neutral" themeOptions={{ elevated: "lg" }}>
+        {lorem}
+      </Alert>
     </Inline>
   ),
   decorators: [Themed],

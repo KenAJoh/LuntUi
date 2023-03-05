@@ -69,6 +69,18 @@
     color: var(--l-text);
     --ac-alert-icon-color: var(--l-red-800);
   }
+
+  &--elevated-sm {
+    box-shadow: var(--l-shadow-sm);
+  }
+
+  &--elevated-md {
+    box-shadow: var(--l-shadow-md);
+  }
+
+  &--elevated-lg {
+    box-shadow: var(--l-shadow-lg);
+  }
 }
 
 [data-lunt-shape="soft"] {

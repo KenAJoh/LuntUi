@@ -18,6 +18,7 @@ export interface AlertProps {
   themeOptions?: {
     shape?: "soft" | "regular" | "sharp";
     space?: "tight" | "regular" | "comfy";
+    elevated?: "sm" | "md" | "lg";
   };
   /**
    * HTMLSpanElement props
@@ -42,6 +43,7 @@ export const Alert = ({
       className={cl("l-alert", `l-alert--${status}`, {
         "l-alert--hasheading": heading,
         "l-alert--inline": iconOptions?.inline,
+        [`l-alert--elevated-${themeOptions?.elevated}`]: themeOptions?.elevated,
       })}
       data-lunt-shape={themeOptions?.shape ?? undefined}
       data-lunt-space={themeOptions?.space ?? undefined}
