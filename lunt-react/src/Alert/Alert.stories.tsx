@@ -46,6 +46,9 @@ export const Demo: Story = {
       <Alert status="neutral" themeOptions={{ elevated: "lg" }}>
         {lorem}
       </Alert>
+      <Alert status="info" themeOptions={{ elevated: "sm" }} dismissible>
+        {lorem}
+      </Alert>
     </Inline>
   ),
   decorators: [Themed],

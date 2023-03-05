@@ -9,6 +9,10 @@ export interface AlertProps {
    * @default "neutral"
    */
   status?: "positive" | "danger" | "caution" | "info" | "neutral" | "blocked";
+  /**
+   * @default false
+   */
+  dismissible?: boolean;
 
   iconOptions?: {
     inline?: boolean;
@@ -30,6 +34,7 @@ export const Alert = ({
   children,
   heading,
   status = "neutral",
+  dismissible = false,
   iconOptions,
   themeOptions,
   nativeProps,
@@ -51,8 +56,18 @@ export const Alert = ({
       <div className="l-alert__heading">
         {Icon && !iconOptions?.hidden && <Icon className="l-alert__icon" />}
         {!iconOptions?.inline && heading}
+        {dismissible && !iconOptions?.inline && (
+          <button className="l-alert__button">
+            <CloseIcon />
+          </button>
+        )}
       </div>
       <div>{children}</div>
+      {dismissible && iconOptions?.inline && (
+        <button className="l-alert__button l-alert__button--inline">
+          <CloseIcon />
+        </button>
+      )}
     </div>
   );
 };
@@ -180,6 +195,28 @@ function BlockedIcon({ ...props }) {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM8.53033 7.46967C8.23744 7.17678 7.76256 7.17678 7.46967 7.46967C7.17678 7.76256 7.17678 8.23744 7.46967 8.53033L15.4697 16.5303C15.7626 16.8232 16.2374 16.8232 16.5303 16.5303C16.8232 16.2374 16.8232 15.7626 16.5303 15.4697L8.53033 7.46967Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function CloseIcon({ ...props }) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      focusable={false}
+      aria-hidden
+      {...props}
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M18.0303 7.03033C18.3232 6.73744 18.3232 6.26256 18.0303 5.96967C17.7374 5.67678 17.2626 5.67678 16.9697 5.96967L12 10.9393L7.03033 5.96967C6.73744 5.67678 6.26256 5.67678 5.96967 5.96967C5.67678 6.26256 5.67678 6.73744 5.96967 7.03033L10.9393 12L5.96967 16.9697C5.67678 17.2626 5.67678 17.7374 5.96967 18.0303C6.26256 18.3232 6.73744 18.3232 7.03033 18.0303L12 13.0607L16.9697 18.0303C17.2626 18.3232 17.7374 18.3232 18.0303 18.0303C18.3232 17.7374 18.3232 17.2626 18.0303 16.9697L13.0607 12L18.0303 7.03033Z"
         fill="currentColor"
       />
     </svg>
