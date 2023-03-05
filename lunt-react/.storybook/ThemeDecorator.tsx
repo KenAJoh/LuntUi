@@ -7,15 +7,15 @@ const Tag = ({ children }: { children: React.ReactNode }) => (
 
 export const Themed = (Story: any) => (
   <div className="themed-decorator">
-    <div data-lunt-feel="sharp">
+    <div data-lunt-shape="sharp">
       <Story />
       <Tag>sharp</Tag>
     </div>
-    <div data-lunt-feel="regular">
+    <div data-lunt-shape="regular">
       <Story />
       <Tag>regular</Tag>
     </div>
-    <div data-lunt-feel="soft">
+    <div data-lunt-shape="soft">
       <Story />
       <Tag>soft</Tag>
     </div>

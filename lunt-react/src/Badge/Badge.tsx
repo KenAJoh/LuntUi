@@ -2,7 +2,7 @@ import cl from "../utils/clsx";
 import React from "react";
 import "./badge.scss";
 
-export interface BadgeProps extends React.AriaAttributes {
+export interface BadgeProps {
   children?: React.ReactNode;
   /**
    * @default "neutral"
@@ -16,11 +16,32 @@ export interface BadgeProps extends React.AriaAttributes {
     | "purple"
     | "turquoise"
     | "clay";
+
+  themeOptions?: {
+    shape?: "soft" | "regular" | "sharp";
+    space?: "tight" | "regular" | "comfy";
+  };
+  /**
+   * HTMLSpanElement props
+   */
+  nativeProps?: React.HTMLAttributes<HTMLSpanElement>;
 }
 
-export const Badge = ({ children, theme, ...rest }: BadgeProps) => {
+export const Badge = ({
+  children,
+  theme,
+  themeOptions,
+  nativeProps,
+  ...rest
+}: BadgeProps) => {
   return (
-    <span {...rest} className={cl("l-badge", `l-badge--${theme}`)}>
+    <span
+      {...nativeProps}
+      {...rest}
+      className={cl("l-badge", `l-badge--${theme}`)}
+      data-lunt-shape={themeOptions?.shape ?? undefined}
+      data-lunt-space={themeOptions?.space ?? undefined}
+    >
       {children}
     </span>
   );
