@@ -4,6 +4,7 @@
 
 [data-lunt-theme="lunt"] {
   --l-text: #111827;
+  --l-text-on-dark: #ffffff;
 
   --l-gray-50: #f9fafb;
   --l-gray-100: #f3f4f6;
