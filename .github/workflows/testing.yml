@@ -27,6 +27,13 @@ jobs:
         id: get_version
         run: yarn get:version
 
+      - name: Get version
+        id: get_version2
+        run: |
+          VERSION=$(yarn get:version)
+          echo "version=$VERSION" >> $GITHUB_ENV
+
       - name: Display version
         run: |
-          echo "Version: ${{ steps.get_version.outputs.version }}"
+          echo "Version: ${{ steps.get_version }}"
+          echo "Version2: ${{ env.version }}"
