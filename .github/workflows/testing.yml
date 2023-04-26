@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: "test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.0
+          cache: yarn
+
+      - name: Use Node.js to extract version
+        run: |
+          echo "PACKAGES=\"[{"name":"@lunt/react","version":"2.1.8"}]\"" >> $GITHUB_ENV
+          VERSION=$(PACKAGES=${{env.PACKAGES}} node -e "console.log(process.env.PACKAGES);")
+          VERSION2=$(node -e "console.log(${{env.PACKAGES}});")
+          echo "version=$VERSION" >> $GITHUB_ENV
+          echo "version2=$VERSION2" >> $GITHUB_ENV
+      - name: Display version
+        run: |
+          echo "Version of @lunt/react is ${{ env.version }}"
+          echo "Version2 of @lunt/react is ${{ env.version2 }}"
