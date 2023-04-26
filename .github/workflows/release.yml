@@ -11,7 +11,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   build:
     name: "Release packages"
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    if: ${{!contains(github.event.head_commit.message, '[ci skip]')}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -44,3 +44,11 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_AUTOMATION }}
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION }}
+
+      - name: Use Node.js to extract version
+        run: |
+          echo "PACKAGES_JSON=${{steps.changesets.outputs.publishedPackages}}" >> $GITHUB_ENV
+          VERSION=$(node -e "console.log(JSON.parse(process.env.PACKAGES_JSON)["@lunt/react"].version)")
+          echo "version=$VERSION" >> $GITHUB_ENV
+      - name: Display version
+        run: echo "Version of @lunt/react is ${{ env.version }}"
