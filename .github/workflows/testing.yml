@@ -1,4 +1,4 @@
-name: Release
+name: Testing
 
 on:
   push:
@@ -20,14 +20,10 @@ jobs:
           node-version: 16.13.0
           cache: yarn
 
-      - name: Use Node.js to extract version
-        run: |
-          echo "PACKAGES=\"[{"name":"@lunt/react","version":"2.1.8"}]\"" >> $GITHUB_ENV
-          VERSION=$(PACKAGES=${{env.PACKAGES}} node -e "console.log(process.env.PACKAGES);")
-          VERSION2=$(node -e "console.log(${{env.PACKAGES}});")
-          echo "version=$VERSION" >> $GITHUB_ENV
-          echo "version2=$VERSION2" >> $GITHUB_ENV
+      - name: Get version
+        id: get_version
+        run: yarn get:version
+
       - name: Display version
         run: |
-          echo "Version of @lunt/react is ${{ env.version }}"
-          echo "Version2 of @lunt/react is ${{ env.version2 }}"
+          echo "Version: ${{ steps.get_version.outputs.version }}"

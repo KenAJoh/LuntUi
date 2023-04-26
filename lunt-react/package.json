@@ -23,7 +23,8 @@
     "build": "yarn clean && rollup -c && yarn css",
     "css": "copyfiles -f build/esm/index.css build/css/ && yarn postcss build/css/index.css --use postcss-combine-duplicated-selectors && rimraf build/esm/*.css build/cjs/*.css",
     "clean": "rimraf build",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "get:version": "node ./getVersion.js"
   },
   "peerDependencies": {
     "react": "^18.0.0",
