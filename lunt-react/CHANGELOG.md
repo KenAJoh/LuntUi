@@ -1,5 +1,11 @@
 # @lunt/react
 
+## 2.1.2
+
+### Patch Changes
+
+- [`3824c61`](https://github.com/KenAJoh/LuntUi/commit/3824c61ba20ec2380dcca9752221ac0bb34f1570) Thanks [@KenAJoh](https://github.com/KenAJoh)! - sdads
+
 ## 2.1.1
 
 ### Patch Changes
