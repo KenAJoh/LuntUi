@@ -47,8 +47,8 @@ jobs:
 
       - name: Use Node.js to extract version
         run: |
-          echo "PACKAGES_JSON=${{steps.changesets.outputs.publishedPackages}}" >> $GITHUB_ENV
-          VERSION=$(node -e "console.log(JSON.parse(process.env.PACKAGES_JSON)['@lunt/react'].version)")
+          echo "PACKAGES_JSON='${{steps.changesets.outputs.publishedPackages}}'" >> $GITHUB_ENV
+          VERSION=$(node -e "console.log(JSON.parse(process.env.PACKAGES_JSON));console.log(JSON.parse(process.env.PACKAGES_JSON)['@lunt/react'].version)")
           echo "version=$VERSION" >> $GITHUB_ENV
       - name: Display version
         run: echo "Version of @lunt/react is ${{ env.version }}"
