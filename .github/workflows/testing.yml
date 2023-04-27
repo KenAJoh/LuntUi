@@ -35,5 +35,4 @@ jobs:
 
       - name: Display version
         run: |
-          echo "Version: ${{ fromJson(steps.get_version) }}"
           echo "Version2: ${{ env.version }}"
