@@ -9,5 +9,3 @@ WIP/POC Open-source component-library for React and Svelte
 ## License
 
 [MIT](https://github.com/KenAJoh/LuntUi/blob/main/LICENCE)
-
-"test"
