@@ -2471,7 +2471,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lunt/react@workspace:lunt-react"
   dependencies:
-    "@lunt/tokens": 2.1.0
     "@rollup/plugin-babel": 6.0.2
     "@rollup/plugin-commonjs": 23.0.2
     "@rollup/plugin-node-resolve": ^15.0.1
@@ -2505,13 +2504,6 @@ __metadata:
     react-dom: ^18.0.0
   languageName: unknown
   linkType: soft
-
-"@lunt/tokens@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@lunt/tokens@npm:2.1.0"
-  checksum: eec484f90d9f45bbcedb6dcdb3b4ad87ba15b917e3d5415425f0ad37e76d2ae323db4527d9cbfadd88807235d9edda48d803c69f022b6422623bfe2b0ea6b6b7
-  languageName: node
-  linkType: hard
 
 "@manypkg/find-root@npm:^1.1.0":
   version: 1.1.0
